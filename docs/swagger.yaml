@@ -1,0 +1,21 @@
+info:
+  contact: {}
+paths:
+  /login:
+    post:
+      parameters:
+      - description: Username
+        in: formData
+        name: username
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Token
+          schema:
+            type: string
+        "400":
+          description: Invalid credentials
+          schema:
+            type: string
+swagger: "2.0"
