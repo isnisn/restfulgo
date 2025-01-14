@@ -2,12 +2,11 @@
 Name: Andreas Nilsson <br>
 Email: andreas.nilsson@lnu.se
 
-# REST API with GraphQL Support
+# REST API in Golang
 
-This project is a RESTful API implemented with Go, including GraphQL capabilities. It uses Postgres for data storage and is containerized using Docker. 
+This project is a RESTful API implemented with Go. It uses Postgres for data storage and is containerized using Docker. 
 It provides authentication using JWT.
 <br>
-### 👉 Note: Only GET, POST is implemented. PUT and DELETE for updating and deleting a device Tbi.
 
 ## Table of Contents
 
@@ -19,7 +18,6 @@ It provides authentication using JWT.
 - [API Endpoints](#api-endpoints)
   - [Authentication](#authentication)
   - [Devices](#devices)
-- [GraphQL Query Example](#graphql-query-example)
 - [Design Patterns and Principles](#design-patterns-and-principles)
   - [Design Patterns](#design-patterns)
   - [Architectural Principles](#architectural-principles)
@@ -66,7 +64,6 @@ export PORT=8080
 2. **Access the Application**
 
    - **REST API**: Accessible via `http://localhost:8080`
-   - **GraphQL Playground**: Accessible via `http://localhost:8080/graphql`
 
 ## API Endpoints 
 #### Either use CURL or Postman
@@ -116,23 +113,6 @@ export PORT=8080
   }
   ```
 
-### GraphQL Query Example
-
-```graphql
-query {
-  devices {
-    id
-    name
-    version
-  }
-  
-  device(id: "1") {
-    id
-    name
-    version
-  }
-}
-```
 
 ## Design Patterns and Principles
 
@@ -149,8 +129,6 @@ query {
 - **REST (Representational State Transfer)**: The API follows REST principles with stateless operations, resource-based URLs, and standard HTTP methods (GET, POST).
 
 - **HATEOAS (Hypermedia as the Engine of Application State)**: While not fully implemented, the API can be extended to include links in responses to enable clients to navigate the API dynamically.
-
-- **GraphQL**: Provides flexibility over traditional REST by allowing clients to request exactly the data they need, reducing over-fetching and under-fetching issues.
 
 ## Running Tests ( Not implemented )
 
