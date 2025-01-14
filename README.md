@@ -21,7 +21,6 @@ It provides authentication using JWT.
 - [Design Patterns and Principles](#design-patterns-and-principles)
   - [Design Patterns](#design-patterns)
   - [Architectural Principles](#architectural-principles)
-- [Running Tests](#running-tests)
 
 ## Prerequisites
 
@@ -126,14 +125,8 @@ export PORT=8080
 
 ### Architectural Principles
 
-- **REST (Representational State Transfer)**: The API follows REST principles with stateless operations, resource-based URLs, and standard HTTP methods (GET, POST).
+- **REST (Representational State Transfer)**: The API follows REST principles with stateless operations, resource-based URLs, and standard HTTP methods (GET, POST, POST, UPDATE, PATCH).
 
 - **HATEOAS (Hypermedia as the Engine of Application State)**: While not fully implemented, the API can be extended to include links in responses to enable clients to navigate the API dynamically.
 
-## Running Tests ( Not implemented )
 
-To run unit tests, execute:
-
-```bash
-go test ./...
-```
